@@ -33,7 +33,7 @@ def get_preference(Userid: str):
 def add_preference(Userid: str, pref: str):
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         cur.execute(
@@ -62,7 +62,7 @@ def add_preference(Userid: str, pref: str):
 def update_preference(Userid: str, pref: str):
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         cur.execute(
@@ -89,7 +89,7 @@ def update_preference(Userid: str, pref: str):
 def add_zip(Userid: str, zip: str, Un: str):
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         cur.execute(
@@ -129,7 +129,7 @@ def get_zip(Userid: str):
     # def add_preference(Userid: int, pref: int):
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         cur.execute("SELECT zipcode FROM userpreference WHERE userid = " + Userid + "")
@@ -155,7 +155,7 @@ def get_zip(Userid: str):
 def test_connection():
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         cur.execute(
@@ -188,7 +188,7 @@ def test_connection():
 def add_reminder(Userid: str, hour: str, min: str):
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         # cur.execute("SELECT "+Userid+" FROM userpreference");
@@ -230,7 +230,7 @@ def add_reminder(Userid: str, hour: str, min: str):
 def get_reminder(Userid: str):
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         cur.execute(
@@ -259,7 +259,7 @@ def get_reminder(Userid: str):
 def get_ids_from_time(hour: str, minute: str):
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         cur.execute(
@@ -287,7 +287,7 @@ def get_all_users():
     """
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         cur.execute(f"SELECT zipcode,username,userid FROM userpreference")

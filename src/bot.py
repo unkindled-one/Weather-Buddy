@@ -14,7 +14,7 @@ import whattowear
 from zoneinfo import ZoneInfo
 
 #  Get the dicord token from the .env file
-load_dotenv()
+load_dotenv("../.env")
 token = os.getenv("TOKEN")
 
 #  Set up preliminary bot settings
@@ -47,8 +47,6 @@ async def on_ready():
     send_warnings.start()
     try:
         synced = await client.tree.sync(guild=None)  # Add the commands to the bot
-        print(synced)
-        print(f"synced {len(synced)} commands")
     except Exception as e:
         print(e)
 
