@@ -1,0 +1,7 @@
+setuptools
+discord.py
+numpy
+meteostat
+requests
+python-dotenv
+pgeocode
