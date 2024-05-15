@@ -7,7 +7,7 @@ def get_preference(Userid: str):
     # def add_preference(Userid: int, pref: int):
     conn = None
     try:
-        conn = sqlite3.connect("database.db")
+        conn = sqlite3.connect("../database.db")
         cur = conn.cursor()
 
         cur.execute("SELECT pref FROM userpreference WHERE userid = " + Userid + "")

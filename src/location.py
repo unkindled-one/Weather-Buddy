@@ -4,7 +4,7 @@ import database
 import pandas as pd
 import numpy as np
 
-zipcodes = np.array(pd.read_csv("zip_code_database.csv")["zip"])
+zipcodes = np.array(pd.read_csv("../zip_code_database.csv")["zip"])
 
 
 def get_coord_from_zip(zip: int):
