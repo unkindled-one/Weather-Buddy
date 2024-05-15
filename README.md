@@ -18,17 +18,21 @@ Weather Buddy is a Discord Bot that provides weather services to its users!
 git clone https://github.com/unkindled-one/Weather-Buddy.git
 ```
 2. Navigate into the directory
-3. Acquire a [Discord API token](https://discord.com/developers/applications) and put the following into a .env file
+3. Install Dependencies using
+```
+pip install -r requirements.txt
+```
+4. Acquire a [Discord API token](https://discord.com/developers/applications) and put the following into a .env file
 ```
 TOKEN=<your token>
 ```
-4. If you don't have a database, run the following command to create one
+5. If you don't have a database, run the following command to create one
 ```
 cd src
 python database.py
 ```
-5. Add the bot to your server
-6. Run the following command to start the bot
+6. Add the bot to your server
+7. Run the following command to start the bot
 ```
 python bot.py
 ```
